@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <title>Shero-Frontend</title>
+
 </head>
+
 <body>
-    Some text
+
+    <div class="header">
+        <div class="header-content">
+            <h1>Add color to your masterpiece</h1>
+            <button class="shop-now-button">Shop Now</button>
+        </div>
+    </div>
+
+    <div class="product-list">
+        <div class="product-card">
+            <img src="photos/photo1.png" alt="Glide premium thread">
+            <p>GLIDE</p>
+        </div>
+        <div class="product-card">
+            <img src="photos/photo1.png" alt="Magnetic core bobbin">
+            <p>MAGNETIC CORE BOBBIN</p>
+        </div>
+        <div class="product-card">
+            <img src="photos/photo1.png" alt="Premium stabilizer">
+            <p>PREMIUM STABILIZER</p>
+        </div>
+    </div>
+
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                    <img src="photos/photo1.png" alt="Product 1">
+                </li>
+                <li class="glide__slide">
+                    <img src="photos/photo1.png" alt="Product 2">
+                </li>
+                <li class="glide__slide">
+                    <img src="photos/photo1.png" alt="Product 3">
+                </li>
+                <li class="glide__slide">
+                    <img src="photos/photo1.png" alt="Product 4">
+                </li>
+            </ul>
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide_arrow glide_arrow--left" data-glide-dir="<">prev</button>
+            <button class="glide_arrow glide_arrow--right" data-glide-dir=">">next</button>
+        </div>
+    </div>
+
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script>
+        new Glide('.glide', {
+            type: 'carousel',
+            perView: 1.8,
+            gap: 20,
+            rewind: true,
+            loop: true,
+            breakpoints: {
+                768: {
+                    perView: 1.5
+                },
+                480: {
+                    perView: 1.2
+                }
+            }
+        }).mount();
+    </script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col company-info">
+                <div class="footer-logo">hab+dash.</div>
+                <div class="footer-logo-by">by FIL-TEC</div>
+                <p>Hab+Dash is a division of the filament technologies company, Fil-Tec, Inc. and is a proudU.S.A.
+                    manufacturer of sewing threads and pre-wound bobbins. Our wholesale site is dedicated to offering
+                    our manufactured products to commercial embroiderers, long-armquilters and retail sewing shops. In
+                    addition to the products we manufacture, we have sourced the best products and accessories to
+                    benefit our customers.</p>
+            </div>
+            <div class="footer-col support">
+                <h3>SUPPORT</h3>
+                <ul>
+                    <li><a href="#">Stitch Rewards</a></li>
+                    <li><a href="#">Stitch Rewards</a></li>
+                    <li><a href="#">Core Return Program</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Online Dealers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col useful-links">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a href="#">Digital Color Card</a></li>
+                    <li><a href="#">Which Bobbin Fits?</a></li>
+                    <li><a href="#">Color Conversion</a></li>
+                    <li><a href="#">Stabilizer Applications</a></li>
+                    <li><a href="#">Selecting a Stabilizer</a></li>
+                    <li><a href="#">New Site Features</a></li>
+                    <li><a href="#">Institute of Heraldry</a></li>
+                    <li><a href="#">Kimberbell Solids</a></li>
+                </ul>
+            </div>
+            <div class="footer-col about-us">
+                <h3>ABOUT US</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Show Schedule</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter">
+                <h3>NEWSLETTER SIGN UP</h3>
+                <p>Subscribe our newsletter to unlock exclusive access to promotions, new product launches and more!</p>
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Hab+Dash. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>

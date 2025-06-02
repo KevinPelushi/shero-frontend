@@ -1,0 +1,233 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-image: url('photos/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    position: relative;
+    padding: 0 5%;
+}
+
+.header-content {
+    z-index: 1;
+    text-align: right;
+    max-width: min(400px, 90%);
+}
+
+.header h1 {
+    font-size: clamp(24px, 5vw, 48px);
+    margin: 0 0 20px;
+}
+
+.shop-now-button {
+    padding: clamp(8px, 2vw, 10px) clamp(20px, 4vw, 30px);
+    font-size: clamp(16px, 2vw, 19px);
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.product-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 0;
+    scrollbar-width: none;
+    max-width: min(800px, 95%);
+    margin: 10px auto;
+    gap: 20px;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: min(250px, 90%);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.glide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: min(805px, 95%);
+    margin: 0 auto;
+    position: relative;
+    padding: 0 5%;
+}
+
+.glide__slides {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: clamp(15px, 3vw, 30px);
+}
+
+.glide__slide img {
+    max-width: 100%;
+    height: auto;
+    transform: scale(0.8);
+}
+
+.glide__arrows {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    gap: 20px;
+}
+
+.footer-col {
+    flex: 1 1 200px; 
+    margin-bottom: 20px;
+}
+
+.footer-col.company-info {
+    flex-basis: 250px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer-logo-by {
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.footer-col h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: #000;
+}
+
+.footer-col.newsletter button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #777;
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 60vh;
+    }
+    
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-card {
+        width: 90%;
+        margin: 10px 0;
+    }
+    
+    .glide__slide img {
+        transform: scale(0.8);
+    }
+     .footer-col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .footer-col ul {
+        text-align: center;
+    }
+    .footer-col ul li {
+        display: inline-block;
+        margin: 0 5px 8px 5px;
+    }
+    .footer-col.company-info {
+         text-align: center;
+    }
+    .footer-logo, .footer-logo-by {
+         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 70vh;
+    }
+    
+    .product-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+      .footer-col {
+        flex-basis: calc(50% - 20px);
+    }
+    .footer-col.company-info {
+         flex-basis: 100%;
+    }
+}
